@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import { termSeedData } from "./seedData";
+// avoid relying on ambient Node "process" type; throw on fatal error instead
 
 const prisma = new PrismaClient();
 
@@ -28,5 +29,5 @@ main().then(
 ).catch(async (e) => {
     console.error(e);
     await prisma.$disconnect();
-    process.exit(1);
+    throw e;
 }); 
