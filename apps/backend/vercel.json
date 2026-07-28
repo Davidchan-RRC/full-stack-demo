@@ -1,0 +1,10 @@
+{
+   "relatedProjects": ["<full-stack-demo-frontend>"],
+
+   "git": {
+     "deploymentEnabled": {
+         "*": false,
+         "main": true
+     }
+ }
+}
